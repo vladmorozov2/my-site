@@ -1,11 +1,25 @@
 img {
-   max-width:250px;
+  max-width: 200px;
 }
 
-.navigation__row--image-container {
-   width: 3%;
-   background-color: var(--logo-background);
+.header-row__logos-container {
+  width: 3%;
+  background-color: var(--logo-background);
+  min-width: 25px;
+  min-height: 25px;
 }
-.navigation__row.black {
-   border-top: 0.5px solid black;
+.navigation__row.header-row.second {
+  border-top: 0.5px solid black;
 }
+.header-row__logos-container--image {
+  width: 17px;
+}
+
+.navigation {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+
+
+

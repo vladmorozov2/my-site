@@ -1,0 +1,18 @@
+.welcome-section__button {
+  border: 1px solid var(--border-color);
+  margin-left: 10px;
+}
+.welcome-section {
+  background: url("../../assets/images/welcome-background.png") center/cover
+    no-repeat;
+  height: 90vh;
+  padding-left: 20%;
+}
+
+.welcome-section__title {
+  font-size: 40px;
+}
+
+.welcome-section__subtitle {
+  font-size: 20px;
+}

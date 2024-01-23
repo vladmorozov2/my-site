@@ -7,6 +7,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  isMenuOpen = true
   isHandset = false;
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver
@@ -15,5 +16,8 @@ export class NavbarComponent {
       .subscribe((result) => {
         this.isHandset = !result.matches;
       });
+  }
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

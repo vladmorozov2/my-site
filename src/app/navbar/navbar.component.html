@@ -1,70 +1,225 @@
 <mat-toolbar class="navigation">
-  <mat-toolbar-row fxLayoutAlign="space-between center" class="navigation__row">
+  <mat-toolbar-row
+    class="navigation__row header-row"
+    fxLayoutAlign="space-between center"
+  >
     <img
       src="../../assets/images/logo.svg"
-      alt="logo"
-      class="navigation__row--logo"
+      alt="Site logo"
+      class="header-row__logo"
     />
     <div
+      class="header-row__contacts"
       fxLayout="row"
-      fxLayoutGap="10px"
-      class="navigation__row--contacts"
+      fxLayoutGap="15px"
       *ngIf="isHandset"
     >
-      <div>
-        <p>Write me</p>
-        <p>adamsmith@email.com</p>
+      <div class="header-row__email" fxLayout="column">
+        <p class="header-row__email--title">Write Me</p>
+        <p class="header-row__email--email">adamsmith@email.com</p>
       </div>
-      <div>
-        <p>Call me</p>
-        <p>+1 (234) 567 89 00</p>
+      <div class="header-row__number" fxLayout="column">
+        <p class="header-row__number--title">Call Me</p>
+        <p class="header-row__number--number">+1 (234) 567 89 00</p>
       </div>
     </div>
     <button
       mat-icon-button
       *ngIf="!isHandset"
-      class="navigation__row--menu"
       [matMenuTriggerFor]="menu"
+      (click)="toggleMenu()"
     >
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu #menu="matMenu"
-      ><a routerLink="/about-me">About me</a>
-      <a routerLink="/edit-page">Edit Page</a></mat-menu
-    >
+    <mat-menu #menu="matMenu" class="header-row__menu" style="width: 200px">
+      <div class="header-row__menu--container" fxLayout="column">
+        <button
+          mat-menu-item
+          routerLink="/"
+          class="header-row__menu--item"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+        >
+          Home
+        </button>
+        <button
+          mat-menu-item
+          routerLink="/about"
+          class="header-row__menu--item"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+        >
+          About
+        </button>
+        <button
+          mat-menu-item
+          routerLink="/contact"
+          class="header-row__menu--item"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+        >
+          Contact
+        </button>
+        <div class="header-row__contacts" fxLayout="column" fxLayoutGap="15px">
+          <div
+            class="header-row__email"
+            fxLayout="column"
+            fxLayoutAlign="center center"
+          >
+            <p class="header-row__email--title">Write Me</p>
+            <p class="header-row__email--email">adamsmith@email.com</p>
+          </div>
+          <div
+            class="header-row__number"
+            fxLayout="column"
+            fxLayoutAlign="center center"
+          >
+            <p class="header-row__number--title">Call Me</p>
+            <p class="header-row__number--number">+1 (234) 567 89 00</p>
+          </div>
+        </div>
+        <div
+          class="header-row__logos"
+          fxLayout="row"
+          fxLayoutGap="5px"
+          fxLayoutAlign="center center"
+        >
+          <div
+            class="header-row__logos-container"
+            fxLayout="column"
+            fxLayoutAlign="center center"
+          >
+            <img
+              src="../../assets/images/logos/instagram.png"
+              alt="Instagram logo"
+              class="header-row__logos-container--image"
+            />
+          </div>
+          <div
+            class="header-row__logos-container"
+            fxLayout="column"
+            fxLayoutAlign="center center"
+          >
+            <img
+              src="../../assets/images/logos/facebook.png"
+              alt="Facebook logo"
+              class="header-row__logos-container--image"
+            />
+          </div>
+          <div
+            class="header-row__logos-container"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <img
+              src="../../assets/images/logos/twitter.png"
+              alt="Twitter logo"
+              class="header-row__logos-container--image"
+            />
+          </div>
+          <div
+            class="header-row__logos-container"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <img
+              src="../../assets/images/logos/youtube.png"
+              alt="Youtube logo"
+              class="header-row__logos-container--image"
+            />
+          </div>
+          <div
+            class="header-row__logos-container"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <img
+              src="../../assets/images/logos/linkedin.png"
+              alt="Linkedin logo   "
+              class="header-row__logos-container--image"
+            />
+          </div>
+        </div>
+      </div>
+    </mat-menu>
   </mat-toolbar-row>
+
   <mat-toolbar-row
     *ngIf="isHandset"
-    class="navigation__row black"
+    class="navigation__row header-row second"
     fxLayoutAlign="space-between center"
   >
-    <nav fxLayout="row" fxLayoutGap="10px">
-      <a routerLink="/about-me">About me</a>
-      <a routerLink="/edit-page">Edit Page</a>
-    </nav>
+    <div class="header-row__nav">
+      <button mat-button routerLink="/" class="header-row__nav--item">
+        Home
+      </button>
+      <button mat-button routerLink="/about" class="header-row__nav--item">
+        About
+      </button>
+      <button mat-button routerLink="/contact" class="header-row__nav--item">
+        Contact
+      </button>
+    </div>
     <div
-      class="navigation__row--images-div"
+      class="header-row__logos"
       fxLayout="row"
-      fxLayoutAlign="end  center"
       fxLayoutGap="5px"
+      fxLayoutAlign="end center"
     >
-      <div class="navigation__row--image-container">
+      <div
+        class="header-row__logos-container"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+      >
         <img
           src="../../assets/images/logos/instagram.png"
-          alt="instagram logo"
+          alt="Instagram logo"
+          class="header-row__logos-container--image"
         />
       </div>
-      <div class="navigation__row--image-container">
-        <img src="../../assets/images/logos/facebook.png" alt="facebook logo" />
+      <div
+        class="header-row__logos-container"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+      >
+        <img
+          src="../../assets/images/logos/facebook.png"
+          alt="Facebook logo"
+          class="header-row__logos-container--image"
+        />
       </div>
-      <div class="navigation__row--image-container">
-        <img src="../../assets/images/logos/twitter.png" alt="twwitter logo" />
+      <div
+        class="header-row__logos-container"
+        fxLayout="row"
+        fxLayoutAlign="center center"
+      >
+        <img
+          src="../../assets/images/logos/twitter.png"
+          alt="Twitter logo"
+          class="header-row__logos-container--image"
+        />
       </div>
-      <div class="navigation__row--image-container">
-        <img src="../../assets/images/logos/youtube.png" alt="youtube logo" />
+      <div
+        class="header-row__logos-container"
+        fxLayout="row"
+        fxLayoutAlign="center center"
+      >
+        <img
+          src="../../assets/images/logos/youtube.png"
+          alt="Youtube logo"
+          class="header-row__logos-container--image"
+        />
       </div>
-      <div class="navigation__row--image-container">
-        <img src="../../assets/images/logos/linkedin.png" alt="linkedin logo" />
+      <div
+        class="header-row__logos-container"
+        fxLayout="row"
+        fxLayoutAlign="center center"
+      >
+        <img
+          src="../../assets/images/logos/linkedin.png"
+          alt="Linkedin logo   "
+          class="header-row__logos-container--image"
+        />
       </div>
     </div>
   </mat-toolbar-row>
