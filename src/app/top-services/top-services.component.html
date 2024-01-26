@@ -1,0 +1,45 @@
+<div class="top-service">
+  <article
+    class="top-service__text"
+    fxLayoutAlign="start start"
+    fxLayout="column"
+  >
+    <h2 class="top-service__title">Top Services</h2>
+    <p class="top-service__subtitle inconsolata-italic">
+      As a licensed architect and designer, I can help you create your dream
+      home or office.
+    </p>
+  </article>
+  
+  <div class="top-service__examples">
+    <div
+      class="top-service__example-container"
+      *ngFor="let item of getData()"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+    >
+      <img
+        [src]="item.image"
+        alt="design example"
+        class="top-service__example--image"
+      />
+      <div
+        class="top-service__hover-container"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+      >
+        <div class="top-service__example--title inconsolata-normal">
+          {{ item.title }}
+        </div>
+        <div class="top-service__example--subtitle inconsolata-normal">
+          {{ item.subtitle }}
+        </div>
+        <button mat-button class="top-service__example--button">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

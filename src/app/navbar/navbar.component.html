@@ -1,6 +1,6 @@
 <mat-toolbar class="navigation">
   <mat-toolbar-row
-    class="navigation__row header-row"
+    class="navigation__row header-row low-screen-paddign"
     fxLayoutAlign="space-between center"
   >
     <img
@@ -15,12 +15,28 @@
       *ngIf="isHandset"
     >
       <div class="header-row__email" fxLayout="column">
-        <p class="header-row__email--title">Write Me</p>
-        <p class="header-row__email--email">adamsmith@email.com</p>
+        <p
+          class="header-row__email--title inconsolata-italic-light contacts-text-color"
+        >
+          Write Me
+        </p>
+        <p
+          class="header-row__email--email inconsolata-normal-light contacts-email-number-color"
+        >
+          adamsmith@email.com
+        </p>
       </div>
       <div class="header-row__number" fxLayout="column">
-        <p class="header-row__number--title">Call Me</p>
-        <p class="header-row__number--number">+1 (234) 567 89 00</p>
+        <p
+          class="header-row__number--title inconsolata-italic-light contacts-text-color"
+        >
+          Call Me
+        </p>
+        <p
+          class="header-row__number--number inconsolata-normal-light contacts-email-number-color"
+        >
+          +1 (234) 567 89 00
+        </p>
       </div>
     </div>
     <button
@@ -31,12 +47,12 @@
     >
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu #menu="matMenu" class="header-row__menu" style="width: 200px">
+    <mat-menu #menu="matMenu" class="header-row__menu">
       <div class="header-row__menu--container" fxLayout="column">
         <button
           mat-menu-item
           routerLink="/"
-          class="header-row__menu--item"
+          class="header-row__menu--item second-row-nav inconsolata-italic-light"
           fxLayout="row"
           fxLayoutAlign="center center"
         >
@@ -45,7 +61,7 @@
         <button
           mat-menu-item
           routerLink="/about"
-          class="header-row__menu--item"
+          class="header-row__menu--item second-row-nav inconsolata-italic-light"
           fxLayout="row"
           fxLayoutAlign="center center"
         >
@@ -53,12 +69,12 @@
         </button>
         <button
           mat-menu-item
-          routerLink="/contact"
-          class="header-row__menu--item"
+          routerLink="/edit"
+          class="header-row__menu--item second-row-nav inconsolata-italic-light"
           fxLayout="row"
           fxLayoutAlign="center center"
         >
-          Contact
+          Edit
         </button>
         <div class="header-row__contacts" fxLayout="column" fxLayoutGap="15px">
           <div
@@ -66,16 +82,32 @@
             fxLayout="column"
             fxLayoutAlign="center center"
           >
-            <p class="header-row__email--title">Write Me</p>
-            <p class="header-row__email--email">adamsmith@email.com</p>
+            <p
+              class="header-row__email--title inconsolata-italic-light contacts-text-color"
+            >
+              Write Me
+            </p>
+            <p
+              class="header-row__email--email1 inconsolata-normal-light contacts-email-number-color"
+            >
+              adam<br />smith@email.com
+            </p>
           </div>
           <div
-            class="header-row__number"
+            class="header-row__number margin-bottom"
             fxLayout="column"
             fxLayoutAlign="center center"
           >
-            <p class="header-row__number--title">Call Me</p>
-            <p class="header-row__number--number">+1 (234) 567 89 00</p>
+            <p
+              class="header-row__number--title inconsolata-italic-light contacts-text-color"
+            >
+              Call Me
+            </p>
+            <p
+              class="header-row__number--number inconsolata-normal-light contacts-email-number-color"
+            >
+              +1 (234) 567 89 00
+            </p>
           </div>
         </div>
         <div
@@ -149,15 +181,27 @@
     class="navigation__row header-row second"
     fxLayoutAlign="space-between center"
   >
-    <div class="header-row__nav">
-      <button mat-button routerLink="/" class="header-row__nav--item">
+    <div class="header-row__nav" fxLayout="row" fxLayoutGap="25px">
+      <button
+        mat-button
+        routerLink="/"
+        class="header-row__nav--item second-row-nav inconsolata-italic-light"
+      >
         Home
       </button>
-      <button mat-button routerLink="/about" class="header-row__nav--item">
+      <button
+        mat-button
+        routerLink="/about"
+        class="header-row__nav--item second-row-nav inconsolata-italic-light"
+      >
         About
       </button>
-      <button mat-button routerLink="/contact" class="header-row__nav--item">
-        Contact
+      <button
+        mat-button
+        routerLink="/edit"
+        class="header-row__nav--item second-row-nav inconsolata-italic-light"
+      >
+        Edit
       </button>
     </div>
     <div

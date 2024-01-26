@@ -10,13 +10,29 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TopServicesComponent } from './top-services/top-services.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { AboutMePreviewComponent } from './about-me-preview/about-me-preview.component';
+import { EditComponent } from './edit/edit.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent, WelcomeComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    WelcomeComponent,
+    TopServicesComponent,
+    AboutMeComponent,
+    AboutMePreviewComponent,
+    EditComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,6 +43,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+    MatCardModule,
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],

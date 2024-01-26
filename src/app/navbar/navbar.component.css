@@ -1,4 +1,4 @@
-img {
+.header-row__logo {
   max-width: 200px;
 }
 
@@ -7,19 +7,50 @@ img {
   background-color: var(--logo-background);
   min-width: 25px;
   min-height: 25px;
+  max-width: 200px;
 }
 .navigation__row.header-row.second {
-  border-top: 0.5px solid black;
+  border-top: 0.5px solid var(--nav-border-color);
 }
 .header-row__logos-container--image {
   width: 17px;
 }
 
 .navigation {
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color: var(--nav-background-color);
 }
 
+.header-row__email--email1 {
+  text-align: center;
+  margin-top: 10px;
+}
+.contacts-text-color {
+  color: var(--nav-contacts-text);
+  font-size: 13px;
+  margin-bottom: -8px;
+}
+.contacts-email-number-color{
+  font-size: 17px;
+  color: var(--nav-contacts-contact-color)
+}
+
+.second-row-nav{
+  font-size: 16px;
+  color: var(--top-service-subtitle-color) !important;
+  font-weight: 500;
 
 
+}
+.margin-bottom{
+  margin-bottom: 13px;
+}
+@media screen and (max-width: 900px) {
+ 
 
+.low-screen-paddign {
+  padding-left: 0;
+  padding-right: 0;
+}
+}
