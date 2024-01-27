@@ -1,6 +1,13 @@
-<textarea name="" id="" cols="50" rows="10" [(ngModel)]="data.aboutMeData.bigDescription"></textarea>
-  <div class="preview">
-    <p>Preview:</p>
-    <div class="preview-content">{{ data.aboutMeData.bigDescription }}</div>
-  </div>
-  
+<form autocomplete="off" (ngSubmit)="saveDescription()">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your TODO item</mat-label>
+    <input name="description" matInput [(ngModel)]="newDescription" />
+  </mat-form-field>
+</form>
+
+<ul>
+  <li  >{{ smallDescription$ | async | json}}</li>
+</ul>
+
+<h2>{{description$ | async| json}}</h2>
+<h2>{{newDescription}}</h2>
