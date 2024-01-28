@@ -21,7 +21,7 @@ export class EditComponent {
 
   constructor(
     private aboutMeDataService: AboutMeDataService,
-    private store: Store,
+    private store: Store
   ) {}
 
   data = this.aboutMeDataService;
@@ -38,7 +38,7 @@ export class EditComponent {
       this.store.dispatch(
         new SaveDescription({
           smallDescription: this.myForm.value.newSmallDescription!,
-        }),
+        })
       );
       this.myForm.reset();
     }
@@ -48,9 +48,9 @@ export class EditComponent {
     this.newBigDescription = '';
   }
   clear() {
-    this.myForm.value.newSmallDescription = '';
     this.newBigDescription = '';
     this.newGoodAt = '';
+    this.myForm.reset();
   }
   add() {
     this.data.aboutMeData.goodAt.push(this.newGoodAt);
