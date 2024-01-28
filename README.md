@@ -1,6 +1,21 @@
 # MySite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
+# Your Project Name
+
+A brief description of your project goes here.
+
+## How to Run
+
+To run this project locally, follow these steps:
+
+### 1. Install Dependencies
+
+First, install the project dependencies using npm. Open your terminal and run:
+
+```bash
+npm install
+
 
 ## Development server
 
