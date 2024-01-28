@@ -1,13 +1,52 @@
-<form autocomplete="off" (ngSubmit)="saveDescription()">
-  <mat-form-field appearance="fill">
-    <mat-label>Enter your TODO item</mat-label>
-    <input name="description" matInput [(ngModel)]="newDescription" />
-  </mat-form-field>
-</form>
+
+<!-- Todo: Add classes -->
+<mat-card class="example-card">
+  <mat-card-header  fxLayoutAlign="center center"
+  fxLayout="column"  fxLayoutGap="20px">
+    <mat-card-title>Edit About page</mat-card-title>
+    <mat-card-subtitle>Adam Smith</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content fxLayoutAlign="center center"
+  fxLayout="row"  fxLayoutGap="20px">
+ 
+    <form autocomplete="off" >
+      <mat-form-field appearance="fill">
+        <mat-label>Change Small Description</mat-label>
+        <input name="description" matInput [(ngModel)]="newSmallDescription" [placeholder]="(smallDescription$ | async) || 'Default Placeholder'" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Change Big Description</mat-label>
+        <input name="description" matInput [(ngModel)]="newBigDescription" placeholder="" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Add New GoodAt Quality</mat-label>
+        <input name="description" matInput [(ngModel)]="newGoodAt" placeholder="" />
+      </mat-form-field>
+    
+    </form>
+  </mat-card-content>
+  <mat-card-actions fxLayoutAlign="center center"
+  fxLayout="row" fxLayoutGap="30px">
+    <button mat-raised-button color="primary" type="submit" (click)="saveDescription()">
+      Save
+    </button>
+    <button mat-raised-button color="warn" type="button" (click)="clear()">
+      Clear
+    </button>
+    <button mat-raised-button color="primary" type="button" (click)="add()">
+      Add New GoodAt
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+
+
+
+
 
 <ul>
   <li  >{{ smallDescription$ | async | json}}</li>
 </ul>
 
-<h2>{{description$ | async| json}}</h2>
-<h2>{{newDescription}}</h2>
+

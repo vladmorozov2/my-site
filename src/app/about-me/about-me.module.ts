@@ -5,10 +5,11 @@ import { AboutMePreviewComponent } from '../about-me-preview/about-me-preview.co
 import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from '../app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AboutMeComponent, AboutMePreviewComponent],
-  imports: [CommonModule, MatIconModule, FlexLayoutModule],
+  imports: [CommonModule, MatIconModule, FlexLayoutModule,MatButtonModule,],
   bootstrap: [AppComponent],
 })
 export class AboutMeModule {}

@@ -17,14 +17,28 @@ export class EditComponent {
 
   constructor(private aboutMeDataService: AboutMeDataService,private store: Store){}
   data = this.aboutMeDataService
+ 
 
-  description$ = this.store.select(state => state.edit.smallDescription);
+  
 
-  newDescription = '';
+  newSmallDescription = '';
+  newBigDescription = '';
+  newGoodAt = '';
 
   saveDescription() {
-    this.store.dispatch(new SaveDescription({smallDescription:this.newDescription}));
-    this.newDescription = '';
+    this.store.dispatch(new SaveDescription({smallDescription:this.newSmallDescription}));
+    this.data.aboutMeData.bigDescription = this.newBigDescription;
+    this.newSmallDescription = '';
+    this.newBigDescription = '';
+  }
+  clear() {
+    this.newSmallDescription = '';
+    this.newBigDescription = '';
+    
+  }
+  add() {
+    this.data.aboutMeData.goodAt.push(this.newGoodAt);
+    this.newGoodAt = '';
   }
 
 }
