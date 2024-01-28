@@ -22,7 +22,8 @@ body {
   --nav-contacts-text: #8c8c8c;
   --nav-contacts-contact-color: #21243d;
   --welcome-color-text: #141414;
-
+  --about-me-text-color: #141414;
+  --about-me-big-description: #8C8C8C;
   font-family: "Poppins", sans-serif;
 }
 img {

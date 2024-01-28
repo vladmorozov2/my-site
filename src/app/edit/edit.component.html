@@ -1,70 +1,76 @@
-<!-- Todo: Add classes -->
-<mat-card class="example-card">
+<mat-card class="example-card edit-component">
   <mat-card-header
+    class="edit-component__header"
     fxLayoutAlign="center center"
     fxLayout="column"
     fxLayoutGap="20px"
   >
-    <mat-card-title>Edit About page</mat-card-title>
-    <mat-card-subtitle>Adam Smith</mat-card-subtitle>
+    <mat-card-title class="edit-component__title">Edit About page</mat-card-title>
+    <mat-card-subtitle class="edit-component__subtitle">Adam Smith</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content
+    class="edit-component__content"
     fxLayoutAlign="center center"
     fxLayout="row"
     fxLayoutGap="20px"
   >
-    <form autocomplete="off" [formGroup]="myForm">
-      <mat-form-field appearance="fill">
+    <form autocomplete="off" [formGroup]="myForm" class="edit-component__form">
+      <mat-form-field appearance="fill" class="edit-component__form-field">
         <mat-label>Change Small Description</mat-label>
         <input
           name="description"
           matInput
           formControlName="newSmallDescription"
           [placeholder]="(smallDescription$ | async) || 'Default Placeholder'"
+          class="edit-component__input"
         />
       </mat-form-field>
     </form>
-    <form>
-      <mat-form-field appearance="fill">
+    <form class="edit-component__form">
+      <mat-form-field appearance="fill" class="edit-component__form-field">
         <mat-label>Change Big Description</mat-label>
         <input
           name="description"
           matInput
           [(ngModel)]="newBigDescription"
           placeholder=""
+          class="edit-component__input"
         />
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="edit-component__form-field">
         <mat-label>Add New GoodAt Quality</mat-label>
         <input
           name="description"
           matInput
           [(ngModel)]="newGoodAt"
           placeholder=""
+          class="edit-component__input"
         />
       </mat-form-field>
     </form>
   </mat-card-content>
   <mat-card-content
+    class="edit-component__content"
     fxLayoutAlign="center center"
     fxLayout="row"
     fxLayoutGap="20px"
   >
     <mat-error
       *ngIf="myForm.get('newSmallDescription')?.hasError('required')"
-      class="custom-error"
+      class="custom-error edit-component__error"
     >
       Small Description is required.
     </mat-error>
     <mat-error
       *ngIf="myForm.get('newSmallDescription')?.hasError('minlength')"
-      class="custom-error"
+      class="custom-error edit-component__error"
     >
       Minimum length of Small Description is 10 characters.
     </mat-error>
   </mat-card-content>
   <mat-card-actions
+    class="edit-component__actions"
     fxLayoutAlign="center center"
     fxLayout="row"
     fxLayoutGap="30px"
@@ -74,6 +80,7 @@
       color="primary"
       type="submit"
       (click)="saveSmallDescription()"
+      class="edit-component__button"
     >
       Save Small Description
     </button>
@@ -82,13 +89,26 @@
       color="primary"
       type="submit"
       (click)="saveBigDescription()"
+      class="edit-component__button"
     >
       Save Big Description
     </button>
-    <button mat-raised-button color="primary" type="button" (click)="add()">
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="add()"
+      class="edit-component__button"
+    >
       Add New Good At
     </button>
-    <button mat-raised-button color="warn" type="button" (click)="clear()">
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      (click)="clear()"
+      class="edit-component__button"
+    >
       Clear
     </button>
   </mat-card-actions>

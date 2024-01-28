@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { AboutMeRoutingModule } from './about-me-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [AboutMeComponent, AboutMePreviewComponent],
@@ -18,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     AboutMeRoutingModule,
     MatToolbarModule,
+    MatCardModule,
   ],
 })
 export class AboutMeModule {}

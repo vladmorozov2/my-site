@@ -1,5 +1,5 @@
 .about-me-preview__example-container {
-  min-width: 200px;
+  min-width: 100px;
   height: 50px;
 }
 
@@ -7,15 +7,86 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 10px;
+  justify-content: center; /* Center horizontally within the grid container */
+  align-items: center;
 }
 .about-me-preview__example--text {
-  width: 120px;
+  width: 100px;
 }
 
 .about-me-preview__example--done-icon {
   color: green;
 }
 
-.top-service__example--button {
+
+
+.about-me-preview {
+  padding: 20px;
+}
+@media screen and (min-width: 600px) {
+  .about-me-preview__example-container {
+    min-width: 200px;
+  }
+
+  .about-me-preview__example--text {
+    width: 120px;
+  }
+}
+
+.about-me-preview__title {
+  font-size: 35px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: var(--about-me-text-color);
+}
+.about-me-preview__subtitle {
+  font-size: 20px;
+  font-family: "incosolata", monospace;
+  color: var(--about-me-text-color);
+  font-weight: 500 !important;
+}
+.about-me-preview__small-description {
+  font-size: 20px;
+  font-family: "incosolata", monospace;
+  font-family: bold !important;
+}
+.about-me-preview__subtitle-good-at {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  color: var(--about-me-text-color);
+}
+.about-me-preview__big-description {
+  font-size: 17px;
+  font-family: "incosolata", monospace;
+  font-family: bold !important;
+  color:var(--about-me-big-description)
+}
+.about-me-preview__button-wrapper {
+  min-width: 150px;
+}
+.about-me-preview__button{
   border: 3px solid black;
+}
+
+.about-me-preview__example--text {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-family: bold !important;
+  color: var(--about-me-text-color);
+  font-style: normal !important;
+
+}
+
+@media screen and (min-width: 800px) {
+  .about-me-preview__button {
+    width: 200px;
+  }
+}
+
+.about-me-preview__button {
+  font-size: 18px;
+  height: 50px;
 }
