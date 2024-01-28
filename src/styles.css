@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'fonts.css';
-
-
+@import "fonts.css";
 
 * {
   margin: 0;
@@ -12,22 +10,21 @@
 html,
 body {
   height: 100%;
-  
 }
 :root {
-    --logo-background: rgb(207,216,185);
-    --border-color: #000;
-    --top-service-button-background: #d9e1c5;
-    --top-service-title-color: #141414;
-    --top-service-subtitle-color: #6A6A6A;
-    --nav-background-color: #fff;
-    --nav-border-color: #d0d0d0;
-    --nav-contacts-text: #8c8c8c;
-    --nav-contacts-contact-color: #21243D;
-    --welcome-color-text: #141414;
-    
-    font-family:  "Poppins",sans-serif ;
-  }
+  --logo-background: rgb(207, 216, 185);
+  --border-color: #000;
+  --top-service-button-background: #d9e1c5;
+  --top-service-title-color: #141414;
+  --top-service-subtitle-color: #6a6a6a;
+  --nav-background-color: #fff;
+  --nav-border-color: #d0d0d0;
+  --nav-contacts-text: #8c8c8c;
+  --nav-contacts-contact-color: #21243d;
+  --welcome-color-text: #141414;
+
+  font-family: "Poppins", sans-serif;
+}
 img {
   width: 100%;
   display: block;
@@ -35,9 +32,3 @@ img {
 body {
   padding: 3%;
 }
-
-
-
-
-
-

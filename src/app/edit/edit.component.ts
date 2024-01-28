@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { AboutMeDataService } from '../about-me-data.service';
 import { Select, Store } from '@ngxs/store';
 
-import { SaveDescription } from '../ngxs_parts/edit.actions';
-import { EditSelectors } from '../ngxs_parts/edit.selectors';
+import { SaveDescription } from '../ngxs-parts/edit.actions';
+import { EditSelectors } from '../ngxs-parts/edit.selectors';
 import { Observable } from 'rxjs';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -21,7 +21,7 @@ export class EditComponent {
 
   constructor(
     private aboutMeDataService: AboutMeDataService,
-    private store: Store
+    private store: Store,
   ) {}
 
   data = this.aboutMeDataService;
@@ -38,7 +38,7 @@ export class EditComponent {
       this.store.dispatch(
         new SaveDescription({
           smallDescription: this.myForm.value.newSmallDescription!,
-        })
+        }),
       );
       this.myForm.reset();
     }

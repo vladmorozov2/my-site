@@ -1,3 +1,3 @@
 export interface EditModel {
-    smallDescription: string;
+  smallDescription: string;
 }

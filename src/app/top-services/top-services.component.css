@@ -27,7 +27,9 @@
   color: white;
   font-size: 20px;
   transform: scale(0);
-  transition: transform 0.3s ease-in-out, 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    0.3s ease-in-out;
 }
 .top-service__example--image {
   height: 100%;
@@ -40,7 +42,6 @@
 
 .top-service__example-container:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  
 }
 
 .top-service__example-container:hover > .top-service__hover-container {
@@ -62,8 +63,6 @@
 }
 
 .top-service__line {
-    color:brown;
-    height: 30px;
+  color: brown;
+  height: 30px;
 }
-
-

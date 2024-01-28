@@ -7,7 +7,7 @@
     no-repeat;
   height: 90vh;
   padding-left: 10%;
-  color: var(--welcome-color-text) ;
+  color: var(--welcome-color-text);
 }
 
 .welcome-section__button {
@@ -28,12 +28,12 @@
 
 @media screen and (max-width: 700px) {
   .welcome-section__title {
-    font-size: 46px; 
+    font-size: 46px;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .welcome-section__title {
-    font-size: 69px; 
+    font-size: 69px;
   }
 }

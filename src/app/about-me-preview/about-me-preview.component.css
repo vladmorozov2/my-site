@@ -9,13 +9,13 @@
   grid-gap: 10px;
 }
 .about-me-preview__example--text {
-    width: 120px;
+  width: 120px;
 }
 
 .about-me-preview__example--done-icon {
-    color: green;
+  color: green;
 }
 
 .top-service__example--button {
-    border: 3px solid black
+  border: 3px solid black;
 }
