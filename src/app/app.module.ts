@@ -15,6 +15,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TopServicesComponent } from './top-services/top-services.component';
 import { AboutMeModule } from './about-me/about-me.module';
 import { EditModule } from './edit/edit.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { EditModule } from './edit/edit.module';
     NavbarComponent,
     WelcomeComponent,
     TopServicesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

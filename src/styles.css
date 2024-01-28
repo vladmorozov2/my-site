@@ -24,6 +24,9 @@ body {
   --welcome-color-text: #141414;
   --about-me-text-color: #141414;
   --about-me-big-description: #8C8C8C;
+  --footer-background-color: #d9e1c5;
+  --footer-text-color: #141414;
+  --footer-description: #6a6a6a;
   font-family: "Poppins", sans-serif;
 }
 img {
