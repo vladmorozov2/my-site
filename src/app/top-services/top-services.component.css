@@ -1,11 +1,11 @@
 .top-service {
-  padding: 40px 10%;
+  padding: 40px 12%;
 }
 
 .top-service__examples {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
 }
 
 .top-service__example-container {
@@ -58,11 +58,23 @@
   font-size: 18px;
   margin: 15px;
   color: var(--top-service-subtitle-color);
-  margin-bottom: 35px;
+  margin-bottom: 30px;
+  padding-bottom: 10px ;
   border-bottom: 1px solid #e5e6e7;
 }
 
 .top-service__line {
   color: brown;
   height: 30px;
+}
+.top-service{
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+
+}
+@media (max-width: 700px) {
+
+  .top-service__title {
+    font-size: 35px;
+  }
 }

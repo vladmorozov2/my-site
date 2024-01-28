@@ -1,5 +1,5 @@
 .header-row__logo {
-  max-width: 200px;
+  max-width: 190px;
 }
 
 .header-row__logos-container {
@@ -49,4 +49,15 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .navigation__row {
+    min-height:80px ;
+  }
+  .burger-menu1 {
+    margin-right: -20px;
+  }
+  .header-row__logo {
+    margin-left: -17px;
+    
+  }
 }
+
