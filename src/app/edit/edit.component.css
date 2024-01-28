@@ -34,14 +34,11 @@
   min-height: 50px;
 }
 .edit-component__button   {
-  background-color: #613029 !important;
+  background-color: #C5E0C8 !important;
 }
 .example-card {
   padding-bottom: 20px;
   min-height: 50vh;
 
 
-}
-.cancel-button {
-  background-color: #C5CFE0 !important;
 }
