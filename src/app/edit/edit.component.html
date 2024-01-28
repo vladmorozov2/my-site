@@ -63,16 +63,20 @@
   </mat-card-content>
   <mat-card-content class="edit-component__content" fxLayout="column"
  
-  fxLayoutAlign="center center">
+  fxLayoutAlign="end center">
     <mat-error
       *ngIf="myForm.get('newSmallDescription')?.hasError('required')"
       class="custom-error edit-component__error"
+      fxLayout="column"
+      fxLayoutAlign="end center"
     >
       Small Description is required.
     </mat-error>
     <mat-error
       *ngIf="myForm.get('newSmallDescription')?.hasError('minlength')"
       class="custom-error edit-component__error"
+      fxLayout="column"
+      fxLayoutAlign="end center"
     >
       Minimum length of Small Description is 10 characters.
     </mat-error>
@@ -110,7 +114,7 @@
       color="warn"
       type="button"
       (click)="clear()"
-      class="edit-component__button1 "
+      class="edit-component__button "
     >
       Clear
     </button>

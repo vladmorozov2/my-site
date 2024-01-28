@@ -26,8 +26,9 @@
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  text-align: center;
+  text-align: end;
   padding-bottom: 20px;
+  
 }
 
 .edit-component__content {
@@ -35,10 +36,17 @@
 }
 .edit-component__button   {
   background-color: #C5E0C8 !important;
+  color: #61293A !important;
+}
+.edit-component__error {
+  color: #6F0100;
 }
 .example-card {
   padding-bottom: 20px;
   min-height: 50vh;
 
 
+}
+.edit-component__form-field {
+  margin-left: 30px;
 }
