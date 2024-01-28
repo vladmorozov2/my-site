@@ -15,6 +15,7 @@ First, install the project dependencies using npm. Open your terminal and run:
 
 ```bash
 npm install
+```
 
 
 ## Development server
